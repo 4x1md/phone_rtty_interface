@@ -2,7 +2,7 @@
 
 ## Overview
 
-This interface board was designed for using RTTY and other digital modes with my Yaesu FT-817ND transceiver and Android phone. 
+This interface board was designed for experimenting with RTTY, SSTV and other digital modes with my Yaesu FT-817ND transceiver using [DroidRTTY](https://play.google.com/store/apps/details?id=com.wolphi.droidrtty&hl=en) and [DroidSSTV](https://play.google.com/store/apps/details?id=com.wolphi.sstv&hl=en) applications on an Android phone.
 
 ## Schematic
 
