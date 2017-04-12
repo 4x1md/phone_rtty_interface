@@ -3,7 +3,7 @@
   (general
     (links 61)
     (no_connects 0)
-    (area 99.924999 49.924999 150.075001 100.075001)
+    (area 87.316667 38.3 157.186666 103.945)
     (thickness 1.6)
     (drawings 33)
     (tracks 114)
@@ -13,6 +13,12 @@
   )
 
   (page A4)
+  (title_block
+    (title "Phone-Transceiver AFSK Interface")
+    (date 2017-04-11)
+    (rev A)
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
@@ -37,7 +43,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.25)
     (user_trace_width 0.5)
     (user_trace_width 0.75)
     (user_trace_width 1)
@@ -2637,10 +2643,10 @@
   (segment (start 138.43 82.55) (end 138.43 86.36) (width 0.5) (layer F.Cu) (net 20))
   (segment (start 138.43 86.36) (end 133.35 91.44) (width 0.5) (layer F.Cu) (net 20) (tstamp 58E9668A))
   (segment (start 133.35 97.71) (end 133.39 97.75) (width 0.5) (layer F.Cu) (net 20) (tstamp 58E9668C))
-  (segment (start 143.51 95.25) (end 143.51 97.75) (width 0.5) (layer B.Cu) (net 21) (status C00000))
+  (segment (start 143.51 95.25) (end 143.51 97.75) (width 0.5) (layer B.Cu) (net 21))
   (segment (start 143.51 95.25) (end 143.51 88.9) (width 0.5) (layer B.Cu) (net 21))
   (segment (start 143.51 88.9) (end 142.24 87.63) (width 0.5) (layer B.Cu) (net 21) (tstamp 58E96691))
-  (segment (start 135.89 95.25) (end 135.89 97.75) (width 0.5) (layer B.Cu) (net 22) (status C00000))
+  (segment (start 135.89 95.25) (end 135.89 97.75) (width 0.5) (layer B.Cu) (net 22))
   (segment (start 135.89 95.25) (end 135.89 92.71) (width 0.5) (layer B.Cu) (net 22))
   (segment (start 137.16 91.44) (end 140.97 91.44) (width 0.5) (layer B.Cu) (net 22) (tstamp 58E96695))
   (segment (start 135.89 92.71) (end 137.16 91.44) (width 0.5) (layer B.Cu) (net 22) (tstamp 58E96694))
