@@ -69,7 +69,7 @@ Trace colors on the oscillograms represent the following signals:
 Some points to note:
 
  - Input voltage amplitude is 2.28Vpp. If we connected 32 Ohm headphones we would obtain 20mW of audio power. 
- - Output vaveform shows that when transmitting Q1 functions as a switch rather than as linear amplifier. In this case this isn't so important because the output voltage is rectified.
+ - Output vaveform shows that when transmitting, Q1 functions as a switch rather than as a linear amplifier. In this mode this isn't so important because the output voltage is rectified.
  - The rectified DC on C6 isn't smooth and shows ripple of about 72mV. It shouldn't affect the PTT switching stability but still is an interesting point to note.
  - DC is 648mV at lowest point. Taking base-emitter voltage of Q2 as 0.6V and R12 as 1kOhm, base current is 
  
@@ -84,8 +84,6 @@ resulting in collector current of ```0.048 mA * 35 = 1.68 mA``` which is at leas
 ![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_005.png)
 
 ![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_006.png)
-
-![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_007.png)
 
 Here we see that the ripple voltage on C6 is smaller than on 250 Hz and is 32mV. Other parameters didn't change.
 

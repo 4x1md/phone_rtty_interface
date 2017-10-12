@@ -114,7 +114,7 @@ I haven't yet completed drilling the front and the rear panel of the box, so the
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/usage_01.jpg)
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/usage_01.jpg)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/usage_02.jpg)
 
 Cuba to Israel. Nice DX!
 
