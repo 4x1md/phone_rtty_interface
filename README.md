@@ -57,7 +57,7 @@ When I started the development, I decided to assemble the device in an enclosure
 
 After some search I found a blue aluminium box 58x50x24mm. The box is relatively cheap and can be purchased from many sellers on eBay or AliExpress. The box fits a PCB of 50x50mm which is enough for this project and has front and rear panels which can be easily modified.
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/box_01.png)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/box_01.jpg)
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/box_02.jpg)
 
@@ -67,11 +67,11 @@ After some search I found a blue aluminium box 58x50x24mm. The box is relatively
 
 The PCB was designed using KiCAD software as a simple two-layer board with through hole mounted parts.
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_front.png)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_front.jpg)
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_back.png)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_back.jpg)
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_3d.png)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_3d.jpg)
 
 ## Photo Gallery
 
@@ -105,8 +105,6 @@ I haven't yet completed drilling the front and the rear panel of the box, so the
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/mech_01.jpg)
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/mech_02.jpg)
-
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/mech_03.jpg)
 
 ### Field tests and using the device
 
