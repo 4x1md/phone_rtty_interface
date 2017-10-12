@@ -20,11 +20,13 @@ More circuits are available in [links section](#links) of this document.
 
 J1 connects the interface to the transceiver. It is a generic 4-pole 3.5mm jack. Its pinout is the same as the pinout found on Android phones. Using this jack makes connecting the phone or tablet easy requiring only a simple 3.5mm-to-3.5mm TRRS jack cable. No custom cables are required.
 
-![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/trrs_conn_cable.jpg)
+![Connector](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/trrs_conn_cable.jpg)
 
 R1 and R2 prevent short-circuit of phone outputs. Their values are not critical and can be in the range of 10 to 51 Ohm. R1 connects the output of the right channel and R2 connects the left. One channel or both can be used. If only one channel is used, only the corresponding resistor should be assembled. In this configuration a wire jumper can be used instead of a resistor.
 
-Transistor Q1 works common emitter voltage amplifier stage. Its bias resistors are R3, R4 and R5. All the three are not required in the same time. If R5 is assembled, the amplifier is a shunt feedback stage. In this case R3 and R4 are not required. If R3 and R4 are assembled the amplifier becomes voltage divider biased without feedback on AC. In this configuration R5 should not be assembled. This three resistor footprints leave some field for experimenting which is essential part of amateur radio.
+Transistor Q1 works common emitter voltage amplifier stage. It is powered from the phone or tablet by the DC voltage which usually powers external microphone. 
+
+The bias resistors of this stage are R3, R4 and R5. All the three are not required in the same time. If R5 is assembled, the amplifier is a shunt feedback stage. In this case R3 and R4 are not required. If R3 and R4 are assembled the amplifier becomes voltage divider biased without feedback on AC. In this configuration R5 should not be assembled. This three resistor footprints leave some field for experimenting which is essential part of amateur radio.
 
 Diodes D1 and D2 rectify the transmitted signal and create DC bias for Q2 which pulls down the PTT line of the transceiver. Different versions of this circuit propose using different types of diodes. Some use silicon diodes, others use Shottkys. My assembled version worked well with 1N4148 silicon diodes. After replacing them with BAT46 Shottkys the bias voltage became a little bit higher. Germanium diodes like 1N34 or 1N60 should work as well.
 
@@ -33,6 +35,8 @@ Transistor Q2 pulls the PTT line of the transceiver down. The PTT line of FT-817
 The circuit has two connectors for connecting the transceiver. P1 ins 6-pin mini-DIN connector which is pin-compatible with DATA connector of Yaesu FT-817ND. The second connector, J2 is 4-pole 3.5mm jack. It is a generic connector which can also be used to connect transceivers. Two connectors are put for redundancy only and in actual circuit only one that is required can be assembled.
 
 Both connectors have 1200 bps and 9600 bps lines and switch SW1 is used to choose between the two data rates. If only one data rate is required, the corresponding switch pins can be shorted with a wire jumper without assembling the switch itself.
+
+![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/ft_817_data_interface.jpg)
 
 C7 and C8 are RF-blocking capacitors thus ceramic type ones are preferred. Other components are not critical. Most of them can be pulled of old electronic equipment.
 
@@ -109,6 +113,10 @@ I haven't yet completed drilling the front and the rear panel of the box, so the
 ### Field tests and using the device
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/usage_01.jpg)
+
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/usage_01.jpg)
+
+Cuba to Israel. Nice DX!
 
 ## Links
 * Designing a Phone/Radio interface: [Part 1](https://waynemerry.wordpress.com/2012/08/16/designing-a-phoneradio-interface/), [Part 2](https://waynemerry.wordpress.com/2012/08/22/ft-817-phone-audio-interface-part-2/), [Part 3](https://waynemerry.wordpress.com/2012/11/02/ft-817-ft-897-phone-audio-interface-part-3/)
