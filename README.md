@@ -32,7 +32,7 @@ Diodes D1 and D2 rectify the transmitted signal and create DC bias for Q2 which 
 
 Transistor Q2 pulls the PTT line of the transceiver down. The PTT line of FT-817ND has pull-up resistors network of 11 kOhm which means that current of 0.45 mA is required to pull the PTT voltage down to zero. It requires bias current of Q2 to be about 20 microamperes. In actual circuit the voltage on C6 will be about 0.8V which will be enough to put Q2 in saturation.
 
-The circuit has two connectors for connecting the transceiver. P1 ins 6-pin mini-DIN connector which is pin-compatible with DATA connector of Yaesu FT-817ND. The second connector, J2 is 4-pole 3.5mm jack. It is a generic connector which can also be used to connect transceivers. Two connectors are put for redundancy only and in actual circuit only one that is required can be assembled.
+The circuit has two connectors for connecting the transceiver. P1 ins 6-pin mini-DIN connector which is pin-compatible with DATA connector of Yaesu FT-817ND. The second connector, J2 is 4-pole 3.5mm jack. It is a generic connector which can also be used to connect transceivers. The 3.5mm TRRS jack does not have PTT line. Two connectors are put for redundancy only and in actual circuit only one that is required can be assembled.
 
 Both connectors have 1200 bps and 9600 bps lines and switch SW1 is used to choose between the two data rates. If only one data rate is required, the corresponding switch pins can be shorted with a wire jumper without assembling the switch itself.
 
