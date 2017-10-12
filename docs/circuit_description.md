@@ -1,27 +1,132 @@
-# RTTY/AFSK Interface Circuit Description
+# RTTY/AFSK Interface Circuit Description and Analysis
 
+## Description
 
+All the measurements in this document are based on the following schematic diagram with the values and part numbers stated on it. The circuit was tested with Samsung Galaxy S7 cellular phone.
 
-![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/reference_01.png)
+![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/circuit_descr.png)
 
-## Overview
+### Receiving mode
 
-This interface board was designed for experimenting with RTTY, SSTV and other digital modes with my Yaesu FT-817ND transceiver using [DroidRTTY](https://play.google.com/store/apps/details?id=com.wolphi.droidrtty&hl=en) and [DroidSSTV](https://play.google.com/store/apps/details?id=com.wolphi.sstv&hl=en) applications on an Android phone.
+The DATA connector of Yaesu FT-817 has two data output pins: pin 3 for data rate of 9600 bps with maximum output level of 500 mVpp and pin 4 for data rate of 1200 bps with maximum output level of 300 mVpp. The latter is used in most HF communications.
 
-## Reference Circuits
+The output from the transceiver is fed to the circuit through R13 to the R10 trimmer potentiometer which serves for input signal level adjustment. Then through R8-C2-C1 it is fed into the base of Q1 (amplifier stage). Collector current of Q1 follows voltage changes on its base and causes voltage changes on the microphone pin of the phone. In this mode the circuit emulates an external microphone.
 
-The idea of this circuit is not new. Many of its variants were published in the internet and the difference between them is relatively small. Usually different versions use different transistors and diodes and some resistors and capacitors values vary but the circuit remains the same.
+The amplitude of these changes is about 10-20mV which is enough for the software to decode it. At the same time this amplitude is not enough to open D1 and D2. It means that no DC bias appears on the base of Q2 and the PTT line of the transceiver is not pulled down.
 
-One of my sources was the article [An AFSK Interface for Android Smartphones](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/An_AFSK_Interface_for_Android_Smartphones.pdf) by Wolfgang Philips, W8DA, and Martin Huyett, K0BXB, which was published in the May 2012 issue of QST.
+### Transmitting mode
 
-![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/reference_01.png)
+Pin 4 of the DATA connector is used for feeding the data into the transceiver. According to the user manual of Yaesu FT-817, data rate of 1200bps requires input voltage of only 40 mVpp. Headphones of a phone or tablet is usually capable to provide more than 1 Vpp which is more than enough.
 
-More circuits are available in [links section](#links) of this document.
+In transmitting mode, the headphone output voltage from the phone passes through R1/R2-C2-R9 to R11 which adjusts the transmitted signal amplitude. From R11 through R14 the transmitted signal reaches the transceiver input.
 
-## Schematic
+The signal from the phone's output reaches also Q1 base through R1/R2-C1. It is amplified and then rectified by voltage doubler C4, D1, D2 into a DC voltage and filtered by C6. The voltage on C6 causes current through the base of Q2 while R12 limits the base current.
 
-![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_interface_cicruit.png)
+Collector current of Q2 keys the transceiver by pulling down the PTT line. The schematics of FT-817ND show that its PTT line is connected to 5V through a total resistance of 11kOhm. It means that the collector current of Q2 should be at least
 
-## Circuit description
+```5 V / 11 kOhm = 0.45 mA```
 
-To be completed...
+The datasheet of 2N2222 states that DC current gain hFE will be 35 in the worst case. It requires base current to be
+
+```0.45 mA / 35 = 0.012 mA = 12 uA```
+
+As will be shown later, base current is much higher.
+
+### Microphone input
+
+Samsung Galaxy S7 provides 2.8VDC on the microphone input when it is open-circuited and 1.2mA when short-circuited. Thus 1.2mA is the maximum current that the discussed circut will be able to draw from the phone.
+
+With the discussed circuit the voltage drops to 2.0V. The collector voltage of Q1 is 0.86V resulting in total current drawn by the circuit of
+
+```(2.0 V - 0.86 V) / 3.3 kOhm = 0.35 mA```
+
+When the collector resistor R6 is replaced with 2.2kOhm, the voltage on the microphone pin becomes 1.87V and the collector voltage increases to 0.93V. This results in collector current of 
+
+```(1.87 V - 0.93 V) / 2.2 kOhm = 0.43 mA```
+
+Reducing the value of R6 results in higher DC voltage on C6 when the same input signal amplitude is applied to the input. One possible explanation to this behavior is that a higher current through R6 is able to charge C6 to a higher voltage.
+
+## Transmission mode tests
+
+This section shows waveforms at different frequencies generated by DroidRTTY. The frequencies stated are mark frequencies. Space frequencies are 170Hz higher. Otherwise stated, the volume on the phone was set to maximum.
+
+Trace colors on the oscillograms represent the following signals:
+
+ - yellow: amplifier input on the base of Q1
+ - cyan: amplifier output on the collector of Q1
+ - green: rectified DC voltage on C6
+ 
+ The reference point is on the transceiver ground i.e. minus of C5 and emitter of Q2.
+
+### 250 Hz
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_001.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_002.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_003.png)
+
+Some points to note:
+
+ - Input voltage amplitude is 2.28Vpp. If we connected 32 Ohm headphones we would obtain 20mW of audio power. 
+ - Output vaveform shows that when transmitting Q1 functions as a switch rather than as linear amplifier. In this case this isn't so important because the output voltage is rectified.
+ - The rectified DC on C6 isn't smooth and shows ripple of about 72mV. It shouldn't affect the PTT switching stability but still is an interesting point to note.
+ - DC is 648mV at lowest point. Taking base-emitter voltage of Q2 as 0.6V and R12 as 1kOhm, base current is 
+ 
+```(0.648 V - 0.6 V) / 1 kOhm = 0.048 mA = 48 uA```
+
+resulting in collector current of ```0.048 mA * 35 = 1.68 mA``` which is at least three times more than required to key the FT-817.
+ 
+### 500 Hz
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_004.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_005.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_006.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_007.png)
+
+Here we see that the ripple voltage on C6 is smaller than on 250 Hz and is 32mV. Other parameters didn't change.
+
+### 1000 Hz
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_008.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_009.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_010.png)
+
+The ripple voltage on C6 became 16.8mV.
+
+### 2000 Hz
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_011.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_012.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_013.png)
+
+The ripple voltage on C6 became 12.8mV.
+
+### 1000 Hz with half output volume
+
+The next test was done with output frequency of 1000 Hz and output volume set to about 50%.
+
+![Output volume](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/s7_mid_volume.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_014.png)
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_015.png)
+
+The input amplitude is about 75mVpp. The output amplitude almost did not change but the duty cycle became closer to 50%.
+
+Rectified DC voltage on C6 is 600mV with the ripple of about 30mV.
+
+### 1000 Hz with one third of output volume
+
+The next waveforms were taken with output volume set to about one third.
+
+![Oscilloscope output](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/oscillograms/osc_016.png)
+
+They show relatively clean sinusoidal signal on the output. The rectified DC is 488mV which will not be enough to drive Q2 into saturation.
