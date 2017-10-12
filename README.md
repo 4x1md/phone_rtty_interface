@@ -10,7 +10,7 @@ The idea of this circuit is not new. Many of its variants were published in the 
 
 One of my sources was the article [An AFSK Interface for Android Smartphones](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/An_AFSK_Interface_for_Android_Smartphones.pdf) by Wolfgang Philips, W8DA, and Martin Huyett, K0BXB, which was published in the May 2012 issue of QST.
 
-![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/reference_01.png)
+![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/reference_01.jpg)
 
 More circuits are available in [links section](#links) of this document.
 
@@ -18,7 +18,7 @@ More circuits are available in [links section](#links) of this document.
 
 ![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_interface_cicruit.png)
 
-J1 connects the device to the transceiver. It is a generic 4-pole 3.5mm jack. Its pinout is the same as the pinout found on Android phones. Using this jack makes connecting the phone or tablet easy requiring only a simple 3.5mm-to-3.5mm TRRS jack cable. No custom cables are required.
+J1 connects the interface to the transceiver. It is a generic 4-pole 3.5mm jack. Its pinout is the same as the pinout found on Android phones. Using this jack makes connecting the phone or tablet easy requiring only a simple 3.5mm-to-3.5mm TRRS jack cable. No custom cables are required.
 
 ![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/trrs_conn_cable.jpg)
 
