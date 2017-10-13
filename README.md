@@ -120,11 +120,11 @@ Cuba to Israel. Nice DX!
 
 ## Known issues
 
-The developers of [Wolphi-Link interface](http://www.wolphi.com/interface/) report the following issue on their page:
+The developers of [Wolphi-Link interface](http://www.wolphi.com/interface/) report the following issue:
 
 ```WolphiLink might not work properly if you transmit on VHF or UHF while having your antenna to close to your phone/tablet and WolphiLink. The PTT might get triggered by RF and would not release.```
 
-I experienced the same behavior on VHF and UHF bands especially when trying to transmit in AM, FM or PKT modes of the FT-817. When the transmitting antenna is close to the board the transceiver remains in TX mode and the only way to release it is to turn it off. The issue usually disappears when the phone is disconnected even if its cable is still connected to the jack.
+I experienced the same behavior on VHF and UHF bands especially when trying to transmit in AM, FM or PKT modes. When the transmitting antenna is close to the board the transceiver remains in TX mode and the only way to release it is to turn it off. The issue usually disappears when the phone is disconnected even if its cable is still connected to the jack.
 
 I suppose that the cables between the transceiver and the phone become a counterpoise of the transmitting antenna and the generated RF causes transceiver keying. I don't know if this issue exists wiht other transceivers.
 
@@ -144,6 +144,7 @@ If I ever do another revision of this board, I'd like to make the following impr
 4. [ ] Removing ground conductor from the component layer.
 5. [ ] Improving the thermal relief on the grounded pads. Today they are sometimes hard to solder.
 6. [ ] Increasing the space between R10 and R11 to fit larger trimmer resistors.
+7. [ ] Adding a TX inhibit switch which will disable triggering the PTT line. It may be useful to prevent notifications or other non radio-related sounds to key the transceiver.
 
 ## Links
 * Designing a Phone/Radio interface: [Part 1](https://waynemerry.wordpress.com/2012/08/16/designing-a-phoneradio-interface/), [Part 2](https://waynemerry.wordpress.com/2012/08/22/ft-817-phone-audio-interface-part-2/), [Part 3](https://waynemerry.wordpress.com/2012/11/02/ft-817-ft-897-phone-audio-interface-part-3/)
