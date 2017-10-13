@@ -88,7 +88,7 @@ The PCB was produced by PCBWay who did a great job. Solder mask was made blue in
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcbs_02.jpg)
 
 :warning: **Important Note!**
-Minimum order at the factory was 10 boards from which I need only two or three. As of October 12, 2017, I have seven and maybe eight boards, which I can give away. If you'd like to build this SWR-meter for yourself, I can send you a board. Feel free to contact me.
+Minimum order at the factory was 10 boards from which I need only two or three. As of October 12, 2017, I have seven and maybe eight boards, which I can give away. If you'd like to build this device for yourself, I can send you a board. Feel free to contact me.
 
 ### Populated PCB
 
