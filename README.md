@@ -18,29 +18,29 @@ More circuits are available in [links section](#links) of this document.
 
 ![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_interface_cicruit.png)
 
-J1 connects the interface to the transceiver. It is a generic 4-pole 3.5mm jack. Its pinout is the same as the pinout found on Android phones. Using this jack makes connecting the phone or tablet easy requiring only a simple 3.5mm-to-3.5mm TRRS jack cable. No custom cables are required.
+J1 connects the interface to a phone or tablet. It is a generic 4-pole 3.5mm jack. Its pinout is the same as that of Android phones. Using this jack makes connecting the phone or tablet easy requiring only a simple 3.5mm-to-3.5mm TRRS jack cable. No custom cables are required.
 
 ![Connector](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/trrs_conn_cable.jpg)
 
 R1 and R2 prevent short-circuit of phone outputs. Their values are not critical and can be in the range of 10 to 51 Ohm. R1 connects the output of the right channel and R2 connects the left. One channel or both can be used. If only one channel is used, only the corresponding resistor should be assembled. In this configuration a wire jumper can be used instead of a resistor.
 
-Transistor Q1 works common emitter voltage amplifier stage. It is powered from the phone or tablet by the DC voltage which usually powers external microphone. 
+Transistor Q1 is a common emitter voltage amplifier stage. It is powered from the phone by the DC voltage which usually powers external microphone. 
 
-The bias resistors of this stage are R3, R4 and R5. All the three are not required in the same time. If R5 is assembled, the amplifier is a shunt feedback stage. In this case R3 and R4 are not required. If R3 and R4 are assembled the amplifier becomes voltage divider biased without feedback on AC. In this configuration R5 should not be assembled. This three resistor footprints leave some field for experimenting which is essential part of amateur radio.
+The bias resistors of this stage are R3, R4 and R5. These three resistors allow building two different amplifier types. All the three should not be assembled at the same time. Assembling R5 only creates a shunt feedback stage. In this case R3 and R4 are not required. If R3 and R4 are assembled the amplifier becomes voltage divider biased stage without AC feedback. In this case R5 is not required. These three resistor footprints leave some field for experimenting which is an essential part of the amateur radio.
 
-Diodes D1 and D2 rectify the transmitted signal and create DC bias for Q2 which pulls down the PTT line of the transceiver. Different versions of this circuit propose using different types of diodes. Some use silicon diodes, others use Shottkys. My assembled version worked well with 1N4148 silicon diodes. After replacing them with BAT46 Shottkys the bias voltage became a little bit higher. Germanium diodes like 1N34 or 1N60 should work as well.
+Diodes D1 and D2 rectify the amplified signal and create DC bias for Q2 which pulls down the PTT line of the transceiver. Different versions of this circuit use different types of diodes. Some use silicon diodes, others use Shottkys. My assembled version worked well with 1N4148 silicon diodes. Replacing them with BAT46 Shottkys increased the rectifier output voltage. Germanium diodes like 1N34 or 1N60 should work as well in this circuit.
 
-Transistor Q2 pulls the PTT line of the transceiver down. The PTT line of FT-817ND has pull-up resistors network of 11 kOhm which means that current of 0.45 mA is required to pull the PTT voltage down to zero. It requires bias current of Q2 to be about 20 microamperes. In actual circuit the voltage on C6 will be about 0.8V which will be enough to put Q2 in saturation.
+Transistor Q2 pulls the PTT line of the transceiver down. The PTT line of FT-817ND has pull-up resistors network with total resistance of 11 kOhm. It means that the current needed to pull the PTT voltage down to zero is 0.45 mA. It requires bias current of Q2 to be about 20 microamperes. In actual circuit the voltage on C6 will be about 0.8V which will be enough to bias Q2 into saturation.
 
-The circuit has two connectors for connecting the transceiver. P1 ins 6-pin mini-DIN connector which is pin-compatible with DATA connector of Yaesu FT-817ND. The second connector, J2 is 4-pole 3.5mm jack. It is a generic connector which can also be used to connect transceivers. The 3.5mm TRRS jack does not have PTT line. Two connectors are put for redundancy only and in actual circuit only one that is required can be assembled.
+The design features two connectors for connecting a transceiver. P1 is a 6-pin mini-DIN connector which is pin-compatible with DATA connector of Yaesu FT-817. The second connector, J2 is 4-pole 3.5mm jack. It is a generic connector which can also be used to connect transceivers. The 3.5mm TRRS jack does not have PTT line. Two connectors are put for redundancy. In actual circuit only one or both can be assembled depending on requirements.
 
 Both connectors have 1200 bps and 9600 bps lines and switch SW1 is used to choose between the two data rates. If only one data rate is required, the corresponding switch pins can be shorted with a wire jumper without assembling the switch itself.
 
 ![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/ft_817_data_interface.jpg)
 
-C7 and C8 are RF-blocking capacitors thus ceramic type ones are preferred. Other components are not critical. Most of them can be pulled of old electronic equipment.
+C7 and C8 are RF-blocking capacitors thus ceramic ones are preferred. Other components are not critical. Most of them can be pulled of old electronic equipment.
 
-If you want more details about this circuit and like seeing oscilloscope output, please refer to [circuit_description.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/circuit_description.md).
+If you like exploring oscilloscope output, doing some math and want more details about this circuit, please refer to [circuit_description.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/circuit_description.md).
 
 ## PCB Design
 
@@ -53,13 +53,13 @@ If you want more details about this circuit and like seeing oscilloscope output,
  - No proprietary connectors.
  - Easy assembly.
  - Good repeatability by other hams.
- - Place for experiments where possible.
+ - Options for experiments.
 
 ### Mechanics
 
-When I started the development, I decided to assemble the device in an enclosure box. The box has to be inexpensive and easily available from different electronic parts suppliers.
+When I started the development, I decided to assemble the device in an enclosure box. The box had to be inexpensive and easily available from different electronic parts suppliers.
 
-After some search I found a blue aluminium box 58x50x24mm. The box is relatively cheap and can be purchased from many sellers on eBay or AliExpress. The box fits a PCB of 50x50mm which is enough for this project and has front and rear panels which can be easily modified.
+After some search I found a blue aluminium box 58x50x24mm. The box is relatively cheap and can be purchased from many sellers on eBay or AliExpress. The box fits a PCB of 50x50mm which is enough for this project and has front and rear panels which can be easily modified by drilling or cutting.
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/box_01.jpg)
 
@@ -69,7 +69,7 @@ After some search I found a blue aluminium box 58x50x24mm. The box is relatively
 
 ### PCB Development
 
-The PCB was designed using KiCAD software as a simple two-layer board with through hole mounted parts.
+The PCB was designed using KiCAD software as a simple two-layer board with through-hole mounted parts.
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_front.jpg)
 
@@ -79,7 +79,7 @@ The PCB was designed using KiCAD software as a simple two-layer board with throu
 
 ## Photo Gallery
 
-### Factory Produced PCB
+### Factory-Produced PCB
 
 The PCB was produced by PCBWay who did a great job. Solder mask was made blue in order to match the color of the enclosure box.
 
@@ -104,7 +104,7 @@ The design uses through hole parts which make PCB assembly quite simple. Connect
 
 ### Assembled Device
 
-I haven't yet completed drilling the front and the rear panel of the box, so the device isn't yet fully assembled. The following photos show that the PCB perfectly matches the size of the chosen enclosure box.
+I haven't yet completed drilling the front and the rear panel of the box, so the device isn't yet fully assembled. The following photos show that the PCB perfectly fits in the chosen box.
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/mech_01.jpg)
 
