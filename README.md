@@ -42,7 +42,7 @@ C7 and C8 are RF-blocking capacitors thus ceramic ones are preferred. Other comp
 
 If you like exploring oscilloscope output, doing some math and want more details about this circuit, please refer to [circuit_description.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/circuit_description.md).
 
-## PCB Design
+## Design
 
 ### Requirements and considerations
 
@@ -118,11 +118,39 @@ I haven't yet completed drilling the front and the rear panel of the box, so the
 
 Cuba to Israel. Nice DX!
 
+## Known issues
+
+The developers of [Wolphi-Link interface](http://www.wolphi.com/interface/) report the following issue on their page:
+
+```WolphiLink might not work properly if you transmit on VHF or UHF while having your antenna to close to your phone/tablet and WolphiLink. The PTT might get triggered by RF and would not release.```
+
+I experienced the same behavior on VHF and UHF bands especially when trying to transmit in AM, FM or PKT modes of the FT-817. When the transmitting antenna is close to the board the transceiver remains in TX mode and the only way to release it is to turn it off. The issue usually disappears when the phone is disconnected even if its cable is still connected to the jack.
+
+I suppose that the cables between the transceiver and the phone become a counterpoise of the transmitting antenna and the generated RF causes transceiver keying. I don't know if this issue exists wiht other transceivers.
+
+Till now, I couln't find any solution. On HF bands and when the transmitting antenna is far from the transceiver the device functions properly.
+
+## Adjustments
+
+A properly assembled device should require only RX and TX level adjustments using R10 and R11 trimmer potentiometers.
+
+## Plans for future development
+
+If I ever do another revision of this board, I'd like to make the following improvements:
+
+1. [ ] Adding an RF-blocking capacitor to the PTT line.
+2. [ ] Adding PTT line to J2 3.5mm jack.
+3. [ ] Adding a capacitor in parallel to R5 for limiting the bandwidth of the amplifier.
+4. [ ] Removing ground conductor from the component layer.
+5. [ ] Improving the thermal relief on the grounded pads. Today they are sometimes hard to solder.
+6. [ ] Increasing the space between R10 and R11 to fit larger trimmer resistors.
+
 ## Links
 * Designing a Phone/Radio interface: [Part 1](https://waynemerry.wordpress.com/2012/08/16/designing-a-phoneradio-interface/), [Part 2](https://waynemerry.wordpress.com/2012/08/22/ft-817-phone-audio-interface-part-2/), [Part 3](https://waynemerry.wordpress.com/2012/11/02/ft-817-ft-897-phone-audio-interface-part-3/)
 * http://www.darc-husum.de/android-interface.html
 * https://www.dk9jc.de/blog/equipment/109-ft-817-smartphone-interface-for-pskdroid-and-aprsdroid
-* http://www.wolphi.com/ham-radio-apps/droidsstv-2/droidsstv-manual/
+* [DroidSSTV manual](http://www.wolphi.com/ham-radio-apps/droidsstv-2/droidsstv-manual/)
+* [Wolphi-Link interface](http://www.wolphi.com/interface/)
 * http://161wt001.blogspot.com/2013/11/construction-interface-sstv-psk-rtty.html
 * https://oe6fte.com/wolphilink-android-interface/
 * https://g4fre.blogspot.com/2014/02/rtty-and-psk31-transceive-with-nexus-7.html
