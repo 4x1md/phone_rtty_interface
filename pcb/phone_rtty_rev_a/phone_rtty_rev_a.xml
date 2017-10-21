@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>D:\MyProjects\phone_rtty_interface\pcb\phone_rtty_rev_a.sch</source>
+    <date>2017-04-08 18:54:36</date>
+    <tool>Eeschema 4.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>phone_rtty_rev_a.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Q1">
+      <value>2N2222</value>
+      <footprint>TO_SOT_Packages_THT:TO-92_Molded_Wide</footprint>
+      <libsource lib="device" part="Q_NPN_EBC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829E7CB</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>2N2222</value>
+      <footprint>TO_SOT_Packages_THT:TO-92_Molded_Wide</footprint>
+      <libsource lib="device" part="Q_NPN_EBC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829E7FF</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>120</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829E968</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>120K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829E9FC</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>10n</value>
+      <footprint>Capacitors_ThroughHole:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829EA63</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>10n</value>
+      <footprint>Capacitors_ThroughHole:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829EAA2</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>100n</value>
+      <footprint>Capacitors_ThroughHole:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829EAD1</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>4.7uF</value>
+      <footprint>Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829EB02</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>100uF</value>
+      <footprint>Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829EB79</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>BAT46</value>
+      <footprint>custom_kicad_footprints:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829EC6D</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>BAT46</value>
+      <footprint>custom_kicad_footprints:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829ECC6</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>4.7uF</value>
+      <footprint>Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582A4F9C</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100uF</value>
+      <footprint>Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582A7315</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>4.7uF</value>
+      <footprint>Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582AADD9</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>1K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582AC05F</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582AC156</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>1K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582AC990</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>1K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582ACA1A</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>470</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582B2581</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>3.3K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582BD2AD</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>To TRX Data</value>
+      <footprint>custom_kicad_footprints:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
+      <libsource lib="custom_kicad_symbols" part="Mini-DIN_6pins_ver4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58410A09</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10K</value>
+      <footprint>Potentiometers:Potentiometer_Trimmer_Piher_PT-6h_Vertical</footprint>
+      <libsource lib="device" part="POT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>582AC2BE</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10K</value>
+      <footprint>Potentiometers:Potentiometer_Trimmer_Piher_PT-6h_Vertical</footprint>
+      <libsource lib="device" part="POT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5829ED4E</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>33K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E42151</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>18K</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E476F0</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Phone</value>
+      <footprint>custom_kicad_footprints:PJ320E_headphones_plug</footprint>
+      <libsource lib="custom_kicad_symbols" part="PJ320E_headphones_plug"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E8BF8B</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Transceiver</value>
+      <footprint>custom_kicad_footprints:PJ320E_headphones_plug</footprint>
+      <libsource lib="custom_kicad_symbols" part="PJ320E_headphones_plug"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E8C573</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>33</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E8D2C6</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>33</value>
+      <footprint>Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E8D350</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>1200/9600</value>
+      <footprint>custom_kicad_footprints:Cliff_UT1x_SPDT_ON-ON_Switch</footprint>
+      <libsource lib="custom_kicad_symbols" part="2pos_switch_with_shield"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E8F01F</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="custom_kicad_symbols" part="2pos_switch_with_shield">
+      <description>inverseur</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">2pos_switch_with_shield</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="custom_kicad_symbols" part="Mini-DIN_6pins_ver4">
+      <description>Mini-DIN 6 pins connector with shell</description>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">Mini-DIN_6pins_ver4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="Shell" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="custom_kicad_symbols" part="PJ320E_headphones_plug">
+      <description>Phone jack with microphone, 3.5mm 6 contacts 4 conductors audio plug.</description>
+      <footprints>
+        <fp>3.5_mm</fp>
+        <fp>audio</fp>
+        <fp>jack</fp>
+        <fp>plug</fp>
+        <fp>mic</fp>
+        <fp>phone</fp>
+        <fp>headphones</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PJ320E_headphones_plug</field>
+      </fields>
+      <pins>
+        <pin num="1" name="R" type="input"/>
+        <pin num="2" name="L" type="output"/>
+        <pin num="3" name="GND" type="passive"/>
+        <pin num="4" name="Mic" type="input"/>
+        <pin num="5" name="N.C." type="NotConnected"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="POT">
+      <description>Potentionmeter</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Q_NPN_EBC">
+      <description>Transistor NPN (general)</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_EBC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="custom_kicad_symbols">
+      <uri>D:\MyProjects\kicad_libraries\custom_kicad_symbols\custom_kicad_symbols.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(Q2-Pad2)">
+      <node ref="R12" pin="1"/>
+      <node ref="Q2" pin="2"/>
+    </net>
+    <net code="2" name="Net-(R11-Pad3)">
+      <node ref="R9" pin="1"/>
+      <node ref="R11" pin="3"/>
+    </net>
+    <net code="3" name="Net-(R11-Pad2)">
+      <node ref="R11" pin="2"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="4" name="Net-(C7-Pad2)">
+      <node ref="SW1" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="C7" pin="2"/>
+    </net>
+    <net code="5" name="Net-(R10-Pad2)">
+      <node ref="R13" pin="2"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="6" name="/TRX_9600">
+      <node ref="J2" pin="1"/>
+      <node ref="P1" pin="4"/>
+      <node ref="SW1" pin="3"/>
+    </net>
+    <net code="7" name="Net-(P1-Pad6)">
+      <node ref="P1" pin="6"/>
+    </net>
+    <net code="8" name="Net-(J1-Pad5)">
+      <node ref="J1" pin="5"/>
+    </net>
+    <net code="9" name="Net-(J2-Pad5)">
+      <node ref="J2" pin="5"/>
+    </net>
+    <net code="10" name="Net-(J1-Pad1)">
+      <node ref="R2" pin="1"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="11" name="Net-(J1-Pad2)">
+      <node ref="R1" pin="1"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="12" name="Net-(C3-Pad1)">
+      <node ref="R7" pin="2"/>
+      <node ref="C3" pin="1"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="13" name="/PHONE_OUT">
+      <node ref="C2" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="14" name="Net-(R10-Pad3)">
+      <node ref="R10" pin="3"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="15" name="Net-(C2-Pad2)">
+      <node ref="R9" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="C2" pin="2"/>
+    </net>
+    <net code="16" name="/PTT">
+      <node ref="P1" pin="3"/>
+      <node ref="Q2" pin="3"/>
+    </net>
+    <net code="17" name="/TRX_1200">
+      <node ref="P1" pin="5"/>
+      <node ref="J2" pin="2"/>
+      <node ref="SW1" pin="1"/>
+    </net>
+    <net code="18" name="/TRX_DATA_IN">
+      <node ref="R14" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="J2" pin="4"/>
+      <node ref="P1" pin="1"/>
+    </net>
+    <net code="19" name="/PHONE_MIC">
+      <node ref="R3" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="J1" pin="4"/>
+    </net>
+    <net code="20" name="/PHONE_GND">
+      <node ref="R7" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="J1" pin="3"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="21" name="Net-(C6-Pad1)">
+      <node ref="D2" pin="1"/>
+      <node ref="R12" pin="2"/>
+      <node ref="C6" pin="1"/>
+    </net>
+    <net code="22" name="Net-(C4-Pad2)">
+      <node ref="D2" pin="2"/>
+      <node ref="D1" pin="1"/>
+      <node ref="C4" pin="2"/>
+    </net>
+    <net code="23" name="Net-(C1-Pad1)">
+      <node ref="Q1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="24" name="Net-(C4-Pad1)">
+      <node ref="R5" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="25" name="GNDREF">
+      <node ref="R10" pin="1"/>
+      <node ref="J2" pin="3"/>
+      <node ref="P1" pin="2"/>
+      <node ref="R11" pin="1"/>
+      <node ref="P1" pin="7"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C7" pin="1"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C6" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="SW1" pin="4"/>
+    </net>
+  </nets>
+</export>
