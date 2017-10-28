@@ -397,6 +397,7 @@
       (xy -2.537313 2.939947) (xy -2.454562 2.96715) (xy -2.376928 2.977424) (xy -2.273043 2.973429)) (layer B.Cu) (width 0.01))
   )
 
+  (gr_circle (center 133.5 111.7) (end 137 111.7) (layer Edge.Cuts) (width 0.15))
   (gr_circle (center 143.7 111.7) (end 147.2 111.7) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 122.7 110.4) (end 122.7 117.2) (angle 90) (layer Dwgs.User) (width 0.05))
   (gr_line (start 140.5 108.5) (end 140.2 108.2) (angle 90) (layer F.SilkS) (width 0.35))
@@ -460,7 +461,6 @@
   (gr_text "TX GAIN" (at 133.5 119.5) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_circle (center 133.5 111.7) (end 137.5 111.7) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 143.7 106.7) (end 143.7 116.7) (angle 90) (layer Dwgs.User) (width 0.05))
   (gr_line (start 133.5 106.7) (end 133.5 116.7) (angle 90) (layer Dwgs.User) (width 0.05))
   (gr_line (start 127.5 111.7) (end 149.7 111.7) (angle 90) (layer Dwgs.User) (width 0.05) (tstamp 59F48643))
