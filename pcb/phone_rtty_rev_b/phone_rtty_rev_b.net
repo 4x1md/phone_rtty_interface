@@ -1,16 +1,16 @@
 (export (version D)
   (design
     (source /mnt/second/MyProjects/phone_rtty_interface/pcb/phone_rtty_rev_b/phone_rtty_rev_b.sch)
-    (date "Sat 28 Oct 2017 13:02:44 IDT")
+    (date "Tue 31 Oct 2017 21:47:40 IST")
     (tool "Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
-        (title "Phone-Transceiver AFSK/RTTY Interface")
+        (title "Phone-transceiver digital modes interface")
         (company "Dmitry Melnichansky 4X1MD")
         (rev B)
         (date 2017-10-21)
         (source phone_rtty_rev_b.sch)
-        (comment (number 1) (value ""))
+        (comment (number 1) (value https://github.com/4x1md/phone_rtty_interface))
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))
         (comment (number 4) (value "")))))
@@ -322,10 +322,10 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
-    (library (logical custom_kicad_symbols)
-      (uri /mnt/second/MyProjects/kicad_libraries/custom_kicad_symbols/custom_kicad_symbols.lib))
     (library (logical device)
-      (uri /usr/share/kicad/library/device.lib)))
+      (uri /usr/share/kicad/library/device.lib))
+    (library (logical custom_kicad_symbols)
+      (uri /mnt/second/MyProjects/kicad_libraries/custom_kicad_symbols/custom_kicad_symbols.lib)))
   (nets
     (net (code 1) (name "Net-(J1-Pad5)")
       (node (ref J1) (pin 5)))
