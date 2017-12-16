@@ -534,7 +534,7 @@
   (gr_text "RTTY Interface Rev. B\nFront Panel" (at 129 91) (layer Cmts.User)
     (effects (font (size 2 2) (thickness 0.3)))
   )
-  (gr_text "Designed by Dmitry Melnichansky 4X1MD" (at 129 122.8) (layer B.Cu)
+  (gr_text "Designed by Dmitry Melnichansky 4X1MD" (at 129 120) (layer B.Cu)
     (effects (font (size 1.25 1.25) (thickness 0.2)) (justify mirror))
   )
   (gr_text http://www.github.com/4x1md/phone_rtty_interface (at 129 122.8) (layer F.Cu)

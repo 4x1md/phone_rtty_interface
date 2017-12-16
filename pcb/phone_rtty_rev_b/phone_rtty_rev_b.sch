@@ -92,23 +92,23 @@ $Comp
 L C C8
 U 1 1 5829EA63
 P 7900 3750
-F 0 "C8" H 8100 3800 50  0000 C CNN
-F 1 "10n" H 8100 3700 50  0000 C CNN
+F 0 "C8" H 8100 3700 50  0000 C CNN
+F 1 "10n" H 8100 3800 50  0000 C CNN
 F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 7938 3600 50  0001 C CNN
 F 3 "" H 7900 3750 50  0000 C CNN
 	1    7900 3750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L C C7
 U 1 1 5829EAA2
 P 7100 3650
-F 0 "C7" H 6900 3700 50  0000 C CNN
-F 1 "10n" H 6900 3600 50  0000 C CNN
+F 0 "C7" H 6900 3600 50  0000 C CNN
+F 1 "10n" H 6900 3700 50  0000 C CNN
 F 2 "Capacitors_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 7138 3500 50  0001 C CNN
 F 3 "" H 7100 3650 50  0000 C CNN
 	1    7100 3650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L C C6
@@ -246,12 +246,12 @@ $Comp
 L R R14
 U 1 1 582ACA1A
 P 6650 4100
-F 0 "R14" V 6700 4300 50  0000 C CNN
-F 1 "1K" V 6700 3900 50  0000 C CNN
+F 0 "R14" V 6700 3900 50  0000 C CNN
+F 1 "1K" V 6700 4300 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 4100 50  0001 C CNN
 F 3 "" H 6650 4100 50  0000 C CNN
 	1    6650 4100
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L R R12
@@ -368,7 +368,7 @@ Wire Wire Line
 Wire Wire Line
 	7500 3900 6800 3900
 Wire Wire Line
-	7500 1900 7500 3900
+	7500 1800 7500 3900
 Wire Wire Line
 	7100 3800 7100 3900
 Connection ~ 7100 3900
@@ -382,7 +382,7 @@ U 1 1 58410A09
 P 9000 2900
 F 0 "P1" H 9000 3400 50  0000 C CNN
 F 1 "TRX Data" H 9000 3300 50  0000 C CNN
-F 2 "custom_kicad_footprints:Connector_Mini-DIN_Female_6Pin_2rows" H 9000 2920 50  0001 C CNN
+F 2 "Phone_RTTY_Footprints:Connector_Mini-DIN_Female_6Pin_2rows" H 9000 2920 50  0001 C CNN
 F 3 "" H 9000 2920 50  0000 C CNN
 	1    9000 2900
 	1    0    0    -1  
@@ -398,7 +398,7 @@ U 1 1 582AC2BE
 P 6000 3650
 F 0 "R11" H 5850 3600 50  0000 C CNN
 F 1 "10K" H 5850 3700 50  0000 C CNN
-F 2 "custom_kicad_footprints:Potentiometer_Trimmer_Vertical_Multi_Compatible" H 6000 3650 50  0001 C CNN
+F 2 "Phone_RTTY_Footprints:Potentiometer_Trimmer_Vertical_Multi_Compatible" H 6000 3650 50  0001 C CNN
 F 3 "" H 6000 3650 50  0000 C CNN
 	1    6000 3650
 	1    0    0    1   
@@ -409,7 +409,7 @@ U 1 1 5829ED4E
 P 5500 3650
 F 0 "R10" H 5350 3600 50  0000 C CNN
 F 1 "10K" H 5350 3700 50  0000 C CNN
-F 2 "custom_kicad_footprints:Potentiometer_Trimmer_Vertical_Multi_Compatible" H 5500 3650 50  0001 C CNN
+F 2 "Phone_RTTY_Footprints:Potentiometer_Trimmer_Vertical_Multi_Compatible" H 5500 3650 50  0001 C CNN
 F 3 "" H 5500 3650 50  0000 C CNN
 	1    5500 3650
 	1    0    0    1   
@@ -482,7 +482,7 @@ U 1 1 58E8BF8B
 P 2800 2500
 F 0 "J1" H 2800 2900 50  0000 C CNN
 F 1 "Phone" H 2800 2800 50  0000 C CNN
-F 2 "custom_kicad_footprints:PJ320E_Headphones_Plug_Short" H 2600 2650 50  0001 C CNN
+F 2 "Phone_RTTY_Footprints:PJ320E_3.5mm_Jack" H 2600 2650 50  0001 C CNN
 F 3 "" H 2600 2650 50  0000 C CNN
 	1    2800 2500
 	-1   0    0    -1  
@@ -493,7 +493,7 @@ U 1 1 58E8C573
 P 8600 2000
 F 0 "J2" H 9200 2100 50  0000 C CNN
 F 1 "Transceiver" H 9200 2000 50  0000 C CNN
-F 2 "custom_kicad_footprints:PJ320E_Headphones_Plug_Short" H 8400 2150 50  0001 C CNN
+F 2 "Phone_RTTY_Footprints:PJ320E_3.5mm_Jack" H 8400 2150 50  0001 C CNN
 F 3 "" H 8400 2150 50  0000 C CNN
 	1    8600 2000
 	1    0    0    -1  
@@ -532,7 +532,7 @@ U 1 1 58E8F01F
 P 7900 2800
 F 0 "SW1" H 7900 3100 50  0000 C CNN
 F 1 "1200/9600" H 7900 3000 50  0000 C CNN
-F 2 "custom_kicad_footprints:Cliff_UT1x_SPDT_ON-ON_Switch_Short" H 7900 2800 50  0001 C CNN
+F 2 "Phone_RTTY_Footprints:Cliff_UT1x_SPDT_ON-ON_Switch_Short" H 7900 2800 50  0001 C CNN
 F 3 "" H 7900 2800 50  0000 C CNN
 	1    7900 2800
 	1    0    0    -1  
@@ -593,8 +593,6 @@ Wire Wire Line
 	7500 2800 7600 2800
 Text Label 7500 3300 1    60   ~ 0
 TRX_DATA_OUT
-Wire Wire Line
-	7300 4100 7300 1800
 Connection ~ 7300 4100
 Wire Wire Line
 	9400 3400 9400 3300
@@ -637,13 +635,15 @@ Wire Wire Line
 	8900 2100 8900 2300
 Connection ~ 8900 2300
 Wire Wire Line
-	8400 1900 7500 1900
-Wire Wire Line
-	7300 1800 8400 1800
-Wire Wire Line
 	3600 2400 3800 2400
 Connection ~ 3800 2400
 Wire Wire Line
 	6200 3000 6200 3400
 Connection ~ 6200 3400
+Wire Wire Line
+	8400 1800 7500 1800
+Wire Wire Line
+	8400 1900 7300 1900
+Wire Wire Line
+	7300 1900 7300 4100
 $EndSCHEMATC
