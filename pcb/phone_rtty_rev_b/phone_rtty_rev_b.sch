@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:custom_kicad_symbols
 LIBS:phone_rtty_rev_b-cache
 EELAYER 25 0
 EELAYER END
@@ -275,9 +274,9 @@ F 3 "" H 4800 1750 50  0000 C CNN
 	1    4800 1750
 	1    0    0    -1  
 $EndComp
-Text Notes 5400 4000 0    60   ~ 0
+Text Notes 5350 4250 0    60   ~ 0
 RX Gain
-Text Notes 6100 3600 0    60   ~ 0
+Text Notes 5950 4250 0    60   ~ 0
 TX Gain
 Text Label 8100 2300 2    60   ~ 0
 PTT
@@ -474,8 +473,8 @@ Wire Wire Line
 Wire Wire Line
 	4600 3300 4600 3400
 Connection ~ 4600 3400
-Text Notes 3400 5600 0    60   ~ 0
-1. R1, R2 are used to prevent short-circuit of phone outputs. Their values should be about 16-51 Ohms and are not critical.\n   R1 connects the right channel of headphones output to the circuit and R2 connects the left channel.\n   If only one of channel is required, leave only the corresponding resistor in the circuit. In this configuration a wire jumper\n   can be used instead of resistor.\n\n2. R3, R4 and R5 are bias resistors for Q1. If R5 is used, R3 and R4 are not required and vice-versa.\n\n3. C7, C8, C10 are RF-blocking capacitors. Ceramic capacitors are preferred.\n\n4. C9 limits Q1 amplifier bandwidth and is optional.\n\n5. R15 is a discharge capacor for discharging C6 at the end of transmission. It must be assembled if Q2 is a MOSFET\n   and not required for a BJT.
+Text Notes 3400 5950 0    60   ~ 0
+1. R1, R2 are used to prevent short-circuit of phone outputs. Their values should be about 16-51 Ohms and are not critical.\n   R1 connects the right channel of headphones output to the circuit and R2 connects the left channel.\n   If only one of channel is connected, only the corresponding resistor should be assembled. In this case a wire jumper\n   can be used in lieu of the resistor.\n\n2. R3, R4 and R5 are bias resistors for Q1. Two assembly options exist:\n   a. only R5 is assembled\n   b. R3 and R4 are assembled without R5\n   All the three should not be assembled together.\n\n3. C7, C8, C10 are RF-blocking capacitors. Ceramic capacitors are preferred.\n\n4. C9 limits Q1 amplifier bandwidth. It was added for experimental purposes and is not necessary for normal ciruit operation.\n\n5. R15 discharges C6 afrer the transmission ends. It must be assembled only if Q2 is a MOSFET.
 $Comp
 L PJ320E_headphones_plug J1
 U 1 1 58E8BF8B
