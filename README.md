@@ -130,6 +130,8 @@ I suppose that the cables between the transceiver and the phone become a counter
 
 Till now, I couln't find any solution. On HF bands and when the transmitting antenna is far from the transceiver the device functions properly.
 
+**Update:** After connecting a shielded cable between the transceiver and the interface, the problem is almost completely.
+
 ## Adjustments
 
 A properly assembled device should require only RX and TX level adjustments using R10 and R11 trimmer potentiometers.
