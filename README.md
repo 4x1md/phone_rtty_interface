@@ -40,7 +40,7 @@ Both connectors have 1200 bps and 9600 bps lines and switch SW1 is used to choos
 
 C7 and C8 are RF-blocking capacitors thus ceramic ones are preferred. Other components are not critical. Most of them can be pulled of old electronic equipment.
 
-## Circuit analysis
+## Circuit Analysis
 
 If you like exploring oscilloscope output, doing some math and want more details about this circuit, please refer to [circuit_description.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/circuit_description.md).
 
