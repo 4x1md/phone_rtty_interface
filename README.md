@@ -42,6 +42,8 @@ C7 and C8 are RF-blocking capacitors thus ceramic ones are preferred. Other comp
 
 ## Circuit Analysis
 
+![Circuit simulation wiht MOSFET](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/simulations/rtty_interface_mosfet_circuit.png)
+
 If you like exploring oscilloscope output, doing some math and want more details about this circuit, please refer to [circuit_description.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/circuit_description.md).
 
 If you like simulating circuits, refer to [circuit_simulations.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/circuit_simulations.md) for LTspice simulations.
