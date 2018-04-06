@@ -32,4 +32,8 @@
 
 ## Receiving mode
 
-To be completed...
+![RX circuit](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/images/simulations/rtty_interface_rx_circuit.png)
+
+#### V<sub>mic</sub> at 250Hz with maximum RX input level and RX level potentiometer in the central position.
+
+![Vmic](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/images/simulations/rtty_interface_rx_v_mic_250hz.png)
