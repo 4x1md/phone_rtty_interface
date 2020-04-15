@@ -14,6 +14,14 @@ One of my sources was the article [An AFSK Interface for Android Smartphones](ht
 
 More circuits are available in [links section](#links) of this document.
 
+## Revision A
+
+The interface has two revisions. The difference between the two is relatively small. Circuit description and mechanics presented further down in this document are relevant for both revisions.
+
+For the schematics and the photos of the first revision please refer to [revision_a.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/revision_a.md)
+
+If you got a blue PCB from me, you have the first revision board.
+
 ## Schematic
 
 ![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_interface_cicruit.png)
@@ -24,13 +32,15 @@ J1 connects the interface to a phone or tablet. It is a generic 4-pole 3.5mm jac
 
 R1 and R2 prevent short-circuit of phone outputs. Their values are not critical and can be in the range of 10 to 51 Ohm. R1 connects the output of the right channel and R2 connects the left. One channel or both can be used. If only one channel is used, only the corresponding resistor should be assembled. In this configuration a wire jumper can be used instead of a resistor.
 
-Transistor Q1 is a common emitter voltage amplifier stage. It is powered from the phone by the DC voltage which usually powers external microphone. 
+Transistor Q1 is a common emitter voltage amplifier stage. It is powered from the phone by the DC voltage which usually powers external microphone.
 
 The bias resistors of this stage are R3, R4 and R5. These three resistors allow building two different amplifier types. All the three should not be assembled at the same time. Assembling R5 only creates a shunt feedback stage. In this case R3 and R4 are not required. If R3 and R4 are assembled the amplifier becomes voltage divider biased stage without AC feedback. In this case R5 is not required. These three resistor footprints leave some field for experimenting which is an essential part of the amateur radio.
 
 Diodes D1 and D2 rectify the amplified signal and create DC bias for Q2 which pulls down the PTT line of the transceiver. Different versions of this circuit use different types of diodes. Some use silicon diodes, others use Shottkys. My assembled version worked well with 1N4148 silicon diodes. Replacing them with BAT46 Shottkys increased the rectifier output voltage. Germanium diodes like 1N34 or 1N60 should work as well in this circuit.
 
 Transistor Q2 pulls the PTT line of the transceiver down. The PTT line of FT-817ND has pull-up resistors network with total resistance of 11 kOhm. It means that the current needed to pull the PTT voltage down to zero is 0.45 mA. It requires bias current of Q2 to be about 20 microamperes. In actual circuit the voltage on C6 will be about 0.8V which will be enough to bias Q2 into saturation.
+
+Resistor R15 discharges C6 when the PTT line needs to be released. It is required if Q2 is a MOSFET. It was added in the second version of the interface.
 
 The design features two connectors for connecting a transceiver. P1 is a 6-pin mini-DIN connector which is pin-compatible with DATA connector of Yaesu FT-817. The second connector, J2 is 4-pole 3.5mm jack. It is a generic connector which can also be used to connect transceivers. The 3.5mm TRRS jack does not have PTT line. Two connectors are put for redundancy. In actual circuit only one or both can be assembled depending on requirements.
 
@@ -48,6 +58,22 @@ If you like exploring oscilloscope output, doing some math and want more details
 
 If you like simulating circuits, refer to [circuit_simulations.md](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/circuit_simulations.md) for LTspice simulations.
 
+## BOM variants
+
+The second revision of the interface Q2 can be BJT or MOSFET.
+
+### BJT Version
+
+![BOM version with BJT](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_bjt.png)
+
+### MOSFET Variant
+
+The rectifier output voltage reaches approximately 2.2V when loaded with a high resistance. Therefore, a low threshold N-channel MOSFET is recommended for this circuit. For example, VN2410L has maximum Vth of 2.0V, which makes it a good choice. However, a general purpose MOSFET with a higher Vth can work too. In my circuit I used 2N7000 which has maximum threshold of 3.0V and it works well.
+
+If Q2 is a MOSFET, R15 is require for discharging C6. Without R15, C6 will remain charged after the first transmit and the PTT line will never be released.
+
+![BOM version with MOSFET](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_mosfet.png)
+
 ## Design
 
 ### Requirements and considerations
@@ -55,7 +81,7 @@ If you like simulating circuits, refer to [circuit_simulations.md](https://githu
  - Enclosure box.
  - Small size.
  - Easy-to-get parts.
- - Adjusting potentiometers from front or rear panel. 
+ - Adjusting potentiometers from front or rear panel.
  - No proprietary connectors.
  - Easy assembly.
  - Good repeatability by other hams.
@@ -65,7 +91,7 @@ If you like simulating circuits, refer to [circuit_simulations.md](https://githu
 
 When I started the development, I decided to assemble the device in an enclosure box. The box had to be inexpensive and easily available from different electronic parts suppliers.
 
-After some search I found a blue aluminium box 58x50x24mm. The box is relatively cheap and can be purchased from many sellers on eBay or AliExpress. The box fits a PCB of 50x50mm which is enough for this project and has front and rear panels which can be easily modified by drilling or cutting.
+After some search I found a blue aluminium box 58x50x24mm. The box is relatively cheap and can be purchased from many sellers on eBay or AliExpress. The box fits a PCB of 50x50mm which is enough for this project and has front and rear panels which can be modified by drilling or cutting. In order to eliminate the drilling process, in revision B I created front and rear panels from PCBs.
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/box_01.jpg)
 
@@ -77,44 +103,49 @@ After some search I found a blue aluminium box 58x50x24mm. The box is relatively
 
 The PCB was designed using KiCAD software as a simple two-layer board with through-hole mounted parts.
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_front.jpg)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_rev_b_front.jpg)
+<!-- ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_back.jpg) -->
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_back.jpg)
+<!-- ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_3d.jpg) -->
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_3d.jpg)
+### Front and Rear panels
+
+Both front and rear panels were made from PCBs. Their fuction is mechanical only and no electronic parts are assembled on these PCBs.
+
+![Front](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_rev_b_front_panel.png)
+
+![Rear](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_rev_b_rear_panel.png)
 
 ## Photo Gallery
 
 ### Factory-Produced PCB
 
-The PCB was produced by PCBWay who did a great job. Solder mask was made blue in order to match the color of the enclosure box.
+The PCBs were produced by PCBWay who did a great job. Solder mask of the first revision was made blue in order to match the color of the enclosure box. The second revision was produced with green solder mask.
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcbs_01.jpg)
-
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcbs_02.jpg)
+<!-- ![PCBs](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcbs.jpg) -->
 
 :warning: **Important Note!**
-Minimum order at the factory was 10 boards from which I need only two or three. As of October 12, 2017, I have seven and maybe eight boards, which I can give away. If you'd like to build this device for yourself, I can send you a board. Feel free to contact me.
+Minimum order at the factory was 10 boards from which I need only two or three. As of April 15, 2020, I have board sets (main PCB, front and rear panel), which I can give away. If you'd like to build this device for yourself, I can send you a board. Feel free to contact me.
 
 ### Populated PCB
 
 The design uses through hole parts which make PCB assembly quite simple. Connectors, trimmer potentiometers and switch are new. All the other components were recovered from old electronic equipment.
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/device_01.jpg)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcba_01.jpg)
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/device_02.jpg)
-
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/device_03.jpg)
-
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/device_04.jpg)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcba_02.jpg)
 
 ### Assembled Device
 
 I haven't yet completed drilling the front and the rear panel of the box, so the device isn't yet fully assembled. The following photos show that the PCB perfectly fits in the chosen box.
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/mech_01.jpg)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/assembled_01.jpg)
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/mech_02.jpg)
+The complete device with front and rear panel assembled:
+
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/assembled_02.jpg)
+
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/assembled_03.jpg)
 
 ### Field tests and using the device
 
@@ -132,9 +163,9 @@ The developers of [Wolphi-Link interface](http://www.wolphi.com/interface/) repo
 
 I experienced the same behavior on VHF and UHF bands especially when trying to transmit in AM, FM or PKT modes. When the transmitting antenna is close to the board the transceiver remains in TX mode and the only way to release it is to turn it off. The issue usually disappears when the phone is disconnected even if its cable is still connected to the jack.
 
-I suppose that the cables between the transceiver and the phone become a counterpoise of the transmitting antenna and the generated RF causes transceiver keying. I don't know if this issue exists wiht other transceivers.
+I suppose that the cables between the transceiver and the phone become a counterpoise of the transmitting antenna and the generated RF causes transceiver keying. I don't know if this issue exists with other transceivers.
 
-Till now, I couln't find any solution. On HF bands and when the transmitting antenna is far from the transceiver the device functions properly.
+Till now, I couldn't find any solution. On HF bands and when the transmitting antenna is far from the transceiver the device functions properly.
 
 **Update:** After connecting a shielded cable between the transceiver and the interface, the problem is almost completely.
 
@@ -146,12 +177,12 @@ A properly assembled device should require only RX and TX level adjustments usin
 
 If I ever do another revision of this board, I'd like to make the following improvements:
 
-1. [ ] Adding an RF-blocking capacitor to the PTT line.
-2. [ ] Adding PTT line to J2 3.5mm jack.
-3. [ ] Adding a capacitor in parallel to R5 for limiting the bandwidth of the amplifier.
-4. [ ] Removing ground conductor from the component layer.
-5. [ ] Improving the thermal relief on the grounded pads. Today they are sometimes hard to solder.
-6. [ ] Increasing the space between R10 and R11 to fit larger trimmer resistors.
+1. [x] Adding an RF-blocking capacitor to the PTT line.
+2. [x] Adding PTT line to J2 3.5mm jack.
+3. [x] Adding a capacitor in parallel to R5 for limiting the bandwidth of the amplifier.
+4. [x] Removing ground conductor from the component layer.
+5. [x] Improving the thermal relief on the grounded pads. Today they are sometimes hard to solder.
+6. [x] Increasing the space between R10 and R11 to fit larger trimmer resistors.
 7. [ ] Adding a TX inhibit switch which will disable triggering the PTT line. It may be useful to prevent notifications or other non radio-related sounds to key the transceiver.
 
 ## Links

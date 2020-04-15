@@ -10,7 +10,7 @@ The PCBs for this revision were blue only. Thus if you got a blue PCB from me, y
 
 ![Schematic](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/revision_a/phone_rtty_interface_cicruit.png)
 
-For the full schematic description please refer to [readme.md](https://github.com/4x1md/phone_rtty_interface/blob/master/readme.md).
+For the full schematic description please refer to [readme.md](https://github.com/4x1md/phone_rtty_interface/blob/master/README.md).
 
 ### PCB Development
 
