@@ -68,7 +68,7 @@ The second revision of the interface Q2 can be BJT or MOSFET.
 
 ### MOSFET Variant
 
-The rectifier output voltage reaches approximately 2.2V when loaded with a high resistance. Therefore, a low threshold N-channel MOSFET is recommended for this circuit. For example, VN2410L has maximum Vth of 2.0V, which makes it a good choice. However, a general purpose MOSFET with a higher Vth can work too. In my circuit I used 2N7000 which has maximum threshold of 3.0V and it works well.
+The rectifier output voltage reaches approximately 2.2V when loaded with a high resistance. Therefore, a low threshold N-channel MOSFET is recommended for this circuit. For example, VN2410L has maximum Vth of 2.0V, which makes it a good choice. However, a general purpose MOSFET with a higher Vth might work too. In my circuit I used 2N7000 which has maximum threshold of 3.0V and it works well.
 
 If Q2 is a MOSFET, R15 is require for discharging C6. Without R15, C6 will remain charged after the first transmit and the PTT line will never be released.
 
@@ -103,7 +103,7 @@ After some search I found a blue aluminium box 58x50x24mm. The box is relatively
 
 The PCB was designed using KiCAD software as a simple two-layer board with through-hole mounted parts.
 
-![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_rev_b_front.jpg)
+![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_rev_b_front.png)
 <!-- ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_back.jpg) -->
 
 <!-- ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_3d.jpg) -->
