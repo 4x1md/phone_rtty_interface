@@ -74,6 +74,12 @@ If Q2 is a MOSFET, R15 is require for discharging C6. Without R15, C6 will remai
 
 ![BOM version with MOSFET](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_mosfet.png)
 
+## Connectors pinout
+
+The following diagram shows the pinout of the external connectors. The phone is connected using 3.5mm jack J1. The transceiver can be connected to the 6-pin Mini-DIN connector P1 or to the 3.5mm jack J2. Connectors P1 and J2 are electrically connected. The PTT line is connected to P1 only.
+
+![External connections](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/external-connections.png)
+
 ## Design
 
 ### Requirements and considerations
