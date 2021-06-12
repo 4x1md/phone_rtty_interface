@@ -4,7 +4,7 @@
 
 This interface board was designed for experimenting with RTTY, SSTV and other digital modes with my Yaesu FT-817ND transceiver using [DroidRTTY](https://play.google.com/store/apps/details?id=com.wolphi.droidrtty&hl=en) and [DroidSSTV](https://play.google.com/store/apps/details?id=com.wolphi.sstv&hl=en) applications on an Android phone.
 
-## Reference Circuits
+## Reference circuits
 
 The idea of this circuit is not new. Many of its variants were published in the internet and the difference between them is relatively small. Usually different versions use different transistors and diodes and some resistors and capacitors values vary but the circuit remains the same.
 
@@ -50,7 +50,7 @@ Both connectors have 1200 bps and 9600 bps lines and switch SW1 is used to choos
 
 C7 and C8 are RF-blocking capacitors thus ceramic ones are preferred. Other components are not critical. Most of them can be pulled of old electronic equipment.
 
-## Circuit Analysis
+## Circuit analysis
 
 ![RX circuit](https://github.com/4x1md/phone_rtty_interface/blob/master/docs/images/simulations/rtty_interface_rx_circuit.png)
 
@@ -62,11 +62,11 @@ If you like simulating circuits, refer to [circuit_simulations.md](https://githu
 
 The second revision of the interface Q2 can be BJT or MOSFET.
 
-### BJT Version
+### BJT version
 
 ![BOM version with BJT](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/phone_rtty_bjt.png)
 
-### MOSFET Variant
+### MOSFET version
 
 The rectifier output voltage reaches approximately 2.2V when loaded with a high resistance. Therefore, a low threshold N-channel MOSFET is recommended for this circuit. For example, VN2410L has maximum Vth of 2.0V, which makes it a good choice. However, a general purpose MOSFET with a higher Vth might work too. In my circuit I used 2N7000 which has maximum threshold of 3.0V and it works well.
 
@@ -105,7 +105,7 @@ After some search I found a blue aluminium box 58x50x24mm. The box is relatively
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/box_03.jpg)
 
-### PCB Development
+### PCB development
 
 The PCB was designed using KiCAD software as a simple two-layer board with through-hole mounted parts.
 
@@ -114,7 +114,7 @@ The PCB was designed using KiCAD software as a simple two-layer board with throu
 
 <!-- ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_3d.jpg) -->
 
-### Front and Rear panels
+### Front and rear panels
 
 Both front and rear panels were made from PCBs. Their fuction is mechanical only and no electronic parts are assembled on these PCBs.
 
@@ -122,9 +122,9 @@ Both front and rear panels were made from PCBs. Their fuction is mechanical only
 
 ![Rear](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcb_rev_b_rear_panel.png)
 
-## Photo Gallery
+## Photo gallery
 
-### Factory-Produced PCB
+### Factory-produced PCB
 
 The PCBs were produced by PCBWay who did a great job. Solder mask of the first revision was made blue in order to match the color of the enclosure box. The second revision was produced with green solder mask.
 
@@ -141,7 +141,7 @@ The design uses through hole parts which make PCB assembly quite simple. Connect
 
 ![Photo](https://raw.githubusercontent.com/4x1md/phone_rtty_interface/master/docs/images/pcba_02.jpg)
 
-### Assembled Device
+### Assembled device
 
 I haven't yet completed drilling the front and the rear panel of the box, so the device isn't yet fully assembled. The following photos show that the PCB perfectly fits in the chosen box.
 
